@@ -1,0 +1,42 @@
+{
+  "name": "Arif's Dönner Kebab",
+  "type": "Restaurant",
+  "tagline": "Arif's special dönner",
+  "description": "Do not try this at home!",
+  "services": [
+    "Kebab",
+    "Baklava"
+  ],
+  "primary_color": "#1A1A2E",
+  "secondary_color": "#16213E",
+  "accent_color": "#E94560",
+  "phone": "+123",
+  "email": "Kebab@asd.me",
+  "address": "123",
+  "city": "123 Berlin",
+  "founded_year": "2026",
+  "owner_name": "Arif",
+  "logo_text": "",
+  "extra_notes": "",
+  "client_notes": "Add a youtube video of kebab: https://www.youtube.com/watch?v=3pbjuDY3xGo&list=RD3pbjuDY3xGo&start_radio=1",
+  "style_preset": "bold",
+  "site_features": [
+    "Booking / Appointments",
+    "Photo Gallery",
+    "FAQ Section",
+    "Testimonials / Reviews",
+    "Newsletter Signup",
+    "Map & Directions",
+    "Pricing Table",
+    "Team / Staff Profiles",
+    "Blog / News Section",
+    "Online Shop / Product Listings",
+    "Promotions / Special Offers",
+    "Opening Hours"
+  ],
+  "site_language": "English (UK)",
+  "inspiration_urls": [
+    "https://www.hesburger.fi/hesekebab--doner--gyros?gad_source=1&gad_campaignid=22288779242&gclid=CjwKCAjw8uTQBhAdEiwAVvtJyor95-earTEzstFYt9_xqhilgBRkAQCb2J_sVxrKrs14LAeXjKAK8RoCPn8QAvD_BwE"
+  ],
+  "generated_at": "2026-05-29T08:48:28.018502Z"
+}
