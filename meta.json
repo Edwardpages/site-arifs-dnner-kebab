@@ -1,0 +1,11 @@
+{
+  "business": "Arif's D\u00f6nner Kebab",
+  "type": "Restaurant",
+  "slug": "arifs-dnner-kebab",
+  "files": [
+    "index.html",
+    "style.css",
+    "script.js"
+  ],
+  "model": "llama-3.3-70b-versatile"
+}
