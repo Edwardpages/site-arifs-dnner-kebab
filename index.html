@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arif's Dönner Kebab</title>
+    <title>Arif's Dönner Kebab – Arif's special dönner</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 <!-- SEO -->
 <meta name="description" content="Do not try this at home!">
-<meta name="keywords" content="Kebab, Baklava">
+<meta name="keywords" content="Kebbab, Baklava">
 <link rel="canonical" href="https://arifs-dnner-kebab.pages.dev">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Arif's Dönner Kebab — Arif's special dönner">
@@ -35,11 +35,25 @@
   "foundingDate": "2026"
 }
 </script>
+<style id="sg-mobile-nav">
+#sg-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:inherit;flex-direction:column;gap:5px;z-index:9999;margin-left:auto;}
+#sg-hamburger span{display:block;width:24px;height:2px;background:currentColor;transition:transform .3s,opacity .3s;border-radius:2px;}
+#sg-mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,20,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:9998;padding:72px 32px 40px;flex-direction:column;gap:4px;overflow-y:auto;}
+#sg-mobile-menu a{color:#fff!important;text-decoration:none;font-size:1.15rem;font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block;transition:opacity .15s;}
+#sg-mobile-menu a:hover{opacity:.65;}
+#sg-close-btn{position:absolute;top:18px;right:20px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;padding:4px;}
+@media(max-width:768px){
+  #sg-hamburger{display:flex!important;}
+  nav ul,nav ol,[class*="nav-link"],[class*="nav-menu"],[class*="navbar-link"],[class*="menu-item"]{display:none!important;}
+  nav [class*="logo"],nav [class*="brand"],[class*="nav-logo"]{display:flex!important;}
+}
+@media(min-width:769px){#sg-hamburger{display:none!important;}#sg-mobile-menu{display:none!important;}}
+</style>
 </head>
 <body>
-    <!-- Sticky Glassmorphism Nav -->
-    <header class="sticky-nav">
-        <nav class="glass-nav">
+    <!-- Sticky Glassmorphism Navigation -->
+    <header class="glass-nav">
+        <nav class="container">
             <a href="#" class="logo">Arif's Dönner Kebab</a>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
@@ -48,338 +62,289 @@
                 <li><a href="#booking">Booking</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#promotions">Promotions</a></li>
-                <li><a href="#hours">Hours</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        <div id="lang-sw" style="position:relative;display:flex;align-items:center;margin-left:.5rem;"><button onclick="var d=document.getElementById('lang-dd');d.style.display=d.style.display==='block'?'none':'block'" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.35rem .8rem;cursor:pointer;font-size:.85rem;font-weight:600;color:inherit;display:flex;align-items:center;gap:.35rem;backdrop-filter:blur(4px);">🇬🇧 English <span style="font-size:.65rem;opacity:.8;">▾</span></button><div id="lang-dd" style="display:none;position:absolute;top:calc(100% + .5rem);right:0;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.15);overflow:hidden;min-width:130px;z-index:10000;"><a href="./index-hu.html" style="display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;text-decoration:none;color:#1a1a2e;font-size:.875rem;font-weight:500;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background=''">🇭🇺 Magyar</a><a href="./index-fi.html" style="display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;text-decoration:none;color:#1a1a2e;font-size:.875rem;font-weight:500;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background=''">🇫🇮 Suomi</a><a href="./index-sv.html" style="display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;text-decoration:none;color:#1a1a2e;font-size:.875rem;font-weight:500;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background=''">🇸🇪 Svenska</a></div></div><script>document.addEventListener("click",function(e){var d=document.getElementById("lang-dd");if(d&&!e.target.closest("#lang-sw"))d.style.display="none";});</script>
-</nav>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-bg" style="background-image:url('https://images.pexels.com/photos/37080266/pexels-photo-37080266.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop&q=80');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Arif's Special Dönner</h1>
-            <p class="hero-subtitle">Do not try this at home!</p>
+    <section id="hero" class="hero-section" style="background-image:url('https://images.pexels.com/photos/37080266/pexels-photo-37080266.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop&q=80');">
+        <div class="overlay"></div>
+        <div class="hero-content container">
+            <h1>Arif's special dönner</h1>
+            <p class="tagline">Do not try this at home!</p>
             <div class="hero-cta">
-                <a href="#menu" class="pill-btn">View Menu</a>
-                <a href="#booking" class="pill-btn accent">Book a Table</a>
+                <a href="#booking" class="pill-btn primary">Book a Table</a>
+                <a href="#menu" class="pill-btn secondary">View Menu</a>
             </div>
         </div>
-        <img src="dönner_man_happy.jpeg" alt="Happy customer" class="hero-hero-img">
     </section>
 
-    <!-- Services / Menu -->
+    <!-- Services / Menu Section -->
     <section id="services" class="section services-section">
-        <h2 class="section-title">Our Menu</h2>
-        <div class="cards-grid">
-            <article class="card">
-                <img src="https://images.pexels.com/photos/14457194/pexels-photo-14457194.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Kebab">
-                <h3>Kebab</h3>
-                <p>Succulent spiced meat served with fresh salad and sauces.</p>
-                <a href="#shop" class="pill-btn small">Order Now</a>
-            </article>
-            <article class="card">
-                <img src="https://images.pexels.com/photos/25810607/pexels-photo-25810607.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Baklava">
-                <h3>Baklava</h3>
-                <p>Honey‑drizzled pastry layered with pistachios.</p>
-                <a href="#shop" class="pill-btn small">Order Now</a>
-            </article>
-            <article class="card">
-                <img src="https://images.pexels.com/photos/4113660/pexels-photo-4113660.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Drinks">
-                <h3>Drinks</h3>
-                <p>Refreshing soft drinks and traditional Ayran.</p>
-                <a href="#shop" class="pill-btn small">Order Now</a>
-            </article>
+        <div class="container">
+            <h2 class="section-title">Our Specials</h2>
+            <div class="card-grid three-col">
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/14457194/pexels-photo-14457194.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Kebab">
+                    <h3>Kebab</h3>
+                    <p>Succulent, perfectly spiced meat served with fresh salad and warm flatbread.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/25810607/pexels-photo-25810607.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Baklava">
+                    <h3>Baklava</h3>
+                    <p>Layered pastry with nuts, drizzled with honey – a sweet finish.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/37080238/pexels-photo-37080238.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Combo Meal">
+                    <h3>Combo Meal</h3>
+                    <p>Kebab with a side of fries and a soft drink – the perfect feast.</p>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="section about-section">
-        <div class="about-grid">
-            <div class="about-image">
-                <img src="https://images.pexels.com/photos/37080238/pexels-photo-37080238.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&fit=crop&q=80" alt="Our restaurant">
-            </div>
-            <div class="about-text">
+        <div class="container two-col">
+            <div class="text-content">
                 <h2>About Arif's Dönner Kebab</h2>
-                <p>Founded in 2026, Arif's Dönner Kebab brings authentic Turkish flavours to Berlin. Our secret lies in the perfect blend of spices, freshly sliced meat and a dash of love. Whether you're after a quick bite or a relaxed dinner, our doors are always open for kebab lovers.</p>
-                <p>We pride ourselves on quality, speed and a friendly atmosphere. Come experience the taste that keeps our customers coming back for more.</p>
+                <p>Founded in 2026 by Arif, our restaurant brings authentic Turkish flavours to Berlin. Every dish is crafted with passion, using the freshest ingredients and traditional recipes.</p>
+                <p>Our mission is simple: serve unforgettable dönner kebab that keeps you coming back for more.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.pexels.com/photos/8813933/pexels-photo-8813933.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&fit=crop&q=80" alt="Restaurant interior">
             </div>
         </div>
     </section>
 
-    <!-- Booking / Appointments -->
+    <!-- Booking / Appointments Section -->
     <section id="booking" class="section booking-section">
-        <h2 class="section-title">Reserve a Table</h2>
-        <form class="booking-form">
-            <label>
-                Name
-                <input type="text" name="name" placeholder="Your name" required>
-            </label>
-            <label>
-                Email
-                <input type="email" name="email" placeholder="you@example.com" required>
-            </label>
-            <label>
-                Phone
-                <input type="tel" name="phone" placeholder="+123456789" required>
-            </label>
-            <label>
-                Date
-                <input type="date" name="date" required>
-            </label>
-            <label>
-                Time
-                <input type="time" name="time" required>
-            </label>
-            <label>
-                Guests
-                <input type="number" name="guests" min="1" max="20" required>
-            </label>
-            <button type="submit" class="pill-btn accent">Book Now</button>
-        </form>
-    </section>
-
-    <!-- Pricing Table -->
-    <section id="pricing" class="section pricing-section">
-        <h2 class="section-title">Pricing</h2>
-        <table class="pricing-table">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Size</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Kebab</td>
-                    <td>Standard</td>
-                    <td>£8.50</td>
-                </tr>
-                <tr>
-                    <td>Kebab</td>
-                    <td>Large</td>
-                    <td>£12.00</td>
-                </tr>
-                <tr>
-                    <td>Baklava</td>
-                    <td>Piece</td>
-                    <td>£3.00</td>
-                </tr>
-                <tr>
-                    <td>Drink</td>
-                    <td>500ml</td>
-                    <td>£2.00</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Team / Staff Profiles -->
-    <section id="team" class="section team-section">
-        <h2 class="section-title">Our Team</h2>
-        <div class="cards-grid">
-            <article class="card staff-card">
-                <img src="https://images.pexels.com/photos/12193823/pexels-photo-12193823.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop&q=80" alt="Arif">
-                <h3>Arif – Owner & Head Chef</h3>
-                <p>Master of the grill with 20 years of experience.</p>
-            </article>
-            <article class="card staff-card">
-                <img src="https://images.pexels.com/photos/3769740/pexels-photo-3769740.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop&q=80" alt="Staff Member">
-                <h3>Leila – Front‑of‑House Manager</h3>
-                <p>Ensuring every guest feels welcome.</p>
-            </article>
-            <article class="card staff-card">
-                <img src="https://images.pexels.com/photos/37290074/pexels-photo-37290074.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop&q=80" alt="Staff Member">
-                <h3>Murat – Pastry Chef</h3>
-                <p>Creator of our famous baklava.</p>
-            </article>
+        <div class="container">
+            <h2 class="section-title">Reserve Your Table</h2>
+            <p>Enjoy a seamless booking experience. Choose your date, time, and party size – we’ll take care of the rest.</p>
+            <a href="#" class="pill-btn primary">Book Now</a>
         </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- Photo Gallery Section -->
     <section id="gallery" class="section gallery-section">
-        <h2 class="section-title">Photo Gallery</h2>
-        <div class="gallery-grid">
-            <img src="https://images.pexels.com/photos/8813933/pexels-photo-8813933.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 1">
-            <img src="https://images.pexels.com/photos/5323489/pexels-photo-5323489.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 2">
-            <img src="https://images.pexels.com/photos/2104568/pexels-photo-2104568.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 3">
-            <img src="https://images.pexels.com/photos/35985960/pexels-photo-35985960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 4">
-            <img src="https://images.pexels.com/photos/4113653/pexels-photo-4113653.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 5">
-            <img src="https://images.pexels.com/photos/15646686/pexels-photo-15646686.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 6">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid six-col">
+                <img src="https://images.pexels.com/photos/25570429/pexels-photo-25570429.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 1">
+                <img src="https://images.pexels.com/photos/7301037/pexels-photo-7301037.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 2">
+                <img src="https://images.pexels.com/photos/12889677/pexels-photo-12889677.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 3">
+                <img src="https://images.pexels.com/photos/7340982/pexels-photo-7340982.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 4">
+                <img src="https://images.pexels.com/photos/25570427/pexels-photo-25570427.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 5">
+                <img src="https://images.pexels.com/photos/37028501/pexels-photo-37028501.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&q=80" alt="Gallery image 6">
+            </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="section faq-section">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <dl class="faq-list">
-            <dt>What are your opening hours?</dt>
-            <dd>We are open Monday‑Friday 11:00‑22:00, Saturday 12:00‑23:00, Sunday 12:00‑20:00.</dd>
-            <dt>Do you offer vegetarian options?</dt>
-            <dd>Yes, we have a range of vegetarian kebabs and salads.</dd>
-            <dt>Can I order online for delivery?</dt>
-            <dd>Absolutely – use the Shop section to place an order.</dd>
-        </dl>
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <details>
+                <summary>Do you offer vegetarian options?</summary>
+                <p>Yes, we have a delicious falafel wrap and grilled vegetable kebab.</p>
+            </details>
+            <details>
+                <summary>What are your opening hours?</summary>
+                <p>Monday‑Friday: 11:00 – 22:00<br>Saturday‑Sunday: 12:00 – 23:00</p>
+            </details>
+            <details>
+                <summary>Do you provide catering for events?</summary>
+                <p>Absolutely – contact us for custom packages.</p>
+            </details>
+        </div>
     </section>
 
-    <!-- Testimonials / Reviews -->
+    <!-- Testimonials / Reviews Section -->
     <section id="testimonials" class="section testimonials-section">
-        <h2 class="section-title">What Our Customers Say</h2>
-        <div class="cards-grid">
-            <article class="card testimonial-card">
-                <p>“The kebab is simply the best I’ve ever had in Berlin – juicy and full of flavour!”</p>
-                <p class="author">– Emma J.</p>
-            </article>
-            <article class="card testimonial-card">
-                <p>“A perfect spot for a quick lunch. The staff are friendly and the baklava is divine.”</p>
-                <p class="author">– Liam K.</p>
-            </article>
-            <article class="card testimonial-card">
-                <p>“I love the ambience and the special offers keep me coming back.”</p>
-                <p class="author">– Sofia R.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup -->
-    <section id="newsletter" class="section newsletter-section">
-        <h2 class="section-title">Stay Updated</h2>
-        <form class="newsletter-form">
-            <label>
-                Email address
-                <input type="email" name="newsletter-email" placeholder="you@domain.com" required>
-            </label>
-            <button type="submit" class="pill-btn accent">Subscribe</button>
-        </form>
-    </section>
-
-    <!-- Blog / News Section -->
-    <section id="blog" class="section blog-section">
-        <h2 class="section-title">Latest News</h2>
-        <div class="cards-grid">
-            <article class="card blog-card">
-                <h3>New Summer Menu Launch</h3>
-                <p>Discover fresh flavours for the warmer months, including a spicy kebab special.</p>
-                <a href="#" class="pill-btn small">Read More</a>
-            </article>
-            <article class="card blog-card">
-                <h3>Behind the Scenes: Making Baklava</h3>
-                <p>Our pastry chef shares the secret to perfectly flaky baklava.</p>
-                <a href="#" class="pill-btn small">Read More</a>
-            </article>
-            <article class="card blog-card">
-                <h3>Community Event – Food Festival</h3>
-                <p>Join us at the Berlin Food Festival this Saturday.</p>
-                <a href="#" class="pill-btn small">Read More</a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Online Shop / Product Listings -->
-    <section id="shop" class="section shop-section">
-        <h2 class="section-title">Shop Our Products</h2>
-        <div class="cards-grid">
-            <article class="card product-card">
-                <img src="https://images.pexels.com/photos/25570429/pexels-photo-25570429.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Kebab Pack">
-                <h3>Kebab Pack (2 pcs)</h3>
-                <p>£15.00</p>
-                <a href="#" class="pill-btn small accent">Add to Cart</a>
-            </article>
-            <article class="card product-card">
-                <img src="https://images.pexels.com/photos/5342251/pexels-photo-5342251.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Baklava Box">
-                <h3>Baklava Box (6 pcs)</h3>
-                <p>£12.00</p>
-                <a href="#" class="pill-btn small accent">Add to Cart</a>
-            </article>
-            <article class="card product-card">
-                <img src="https://images.pexels.com/photos/16064240/pexels-photo-16064240.jpeg?auto=compress&cs=tinysrgb&w=400&h=280&fit=crop&q=80" alt="Drink Bundle">
-                <h3>Drink Bundle (4 cans)</h3>
-                <p>£6.00</p>
-                <a href="#" class="pill-btn small accent">Add to Cart</a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Promotions / Special Offers -->
-    <section id="promotions" class="section promotions-section">
-        <h2 class="section-title">Special Offers</h2>
-        <div class="promo-cards">
-            <article class="card promo-card">
-                <h3>Monday Madness</h3>
-                <p>Get 20% off all kebabs every Monday.</p>
-                <a href="#" class="pill-btn small">Claim Offer</a>
-            </article>
-            <article class="card promo-card">
-                <h3>Family Feast</h3>
-                <p>Buy 2 kebabs, get 1 free – valid until 30 June.</p>
-                <a href="#" class="pill-btn small">Claim Offer</a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Opening Hours -->
-    <section id="hours" class="section hours-section">
-        <h2 class="section-title">Opening Hours</h2>
-        <ul class="hours-list">
-            <li>Monday – Friday: 11:00 – 22:00</li>
-            <li>Saturday: 12:00 – 23:00</li>
-            <li>Sunday: 12:00 – 20:00</li>
-        </ul>
-    </section>
-
-    <!-- Map & Directions -->
-    <section id="map" class="section map-section">
-        <h2 class="section-title">Find Us</h2>
-        <div class="map-cta-card">
-            <p>Our restaurant is located in the heart of Berlin. Click below for directions.</p>
-            <a href="#" class="pill-btn accent">View Directions</a>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="youtube" style="padding:5rem 1rem;background:var(--bg,#f9f8f6);text-align:center;"><div style="max-width:860px;margin:0 auto;"><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:1rem;color:var(--text,#1a1a2e);">Watch Us in Action</h2><p style="color:var(--muted,#6b7280);margin-bottom:2rem;">See what we do best.</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius,16px);box-shadow:var(--shadow,0 4px 24px rgba(0,0,0,.10));"><iframe src="https://www.youtube.com/embed/3pbjuDY3xGo?feature=oembed" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div></section>
-<section id="contact" class="section contact-section">
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-details">
-                <p><strong>Phone:</strong> +123</p>
-                <p><strong>Email:</strong> <a href="mailto:Kebab@asd.me">Kebab@asd.me</a></p>
-                <p><strong>Address:</strong> 123, 123 Berlin</p>
+        <div class="container">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <div class="card-grid three-col">
+                <article class="card testimonial-card">
+                    <p>"The kebab is simply the best in town – juicy, flavourful, and perfectly spiced!"</p>
+                    <p class="author">– Emma J.</p>
+                </article>
+                <article class="card testimonial-card">
+                    <p>"A must‑visit for any food lover. The baklava is melt‑in‑your‑mouth sweet."</p>
+                    <p class="author">– Liam K.</p>
+                </article>
+                <article class="card testimonial-card">
+                    <p>"Friendly staff and a great atmosphere. Perfect spot for a casual dinner."</p>
+                    <p class="author">– Sofia R.</p>
+                </article>
             </div>
-            <form class="contact-form">
-                <label>
-                    Name
-                    <input type="text" name="contact-name" placeholder="Your name" required>
-                </label>
-                <label>
-                    Email
-                    <input type="email" name="contact-email" placeholder="you@domain.com" required>
-                </label>
-                <label>
-                    Message
-                    <textarea name="contact-message" placeholder="Your message" rows="5" required></textarea>
-                </label>
-                <button type="submit" class="pill-btn accent">Send Message</button>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section id="newsletter" class="section newsletter-section">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p>Join our mailing list for the latest offers, new menu items, and events.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="pill-btn primary">Subscribe</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer-section">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Arif's Dönner Kebab</h3>
-                <p>© 2026 Arif's Dönner Kebab. All rights reserved.</p>
+    <!-- Pricing Table Section -->
+    <section id="pricing" class="section pricing-section">
+        <div class="container">
+            <h2 class="section-title">Pricing</h2>
+            <div class="pricing-table three-col">
+                <div class="price-card">
+                    <h3>Standard Kebab</h3>
+                    <p class="price">£7.99</p>
+                    <ul>
+                        <li>Choice of meat</li>
+                        <li>Fresh salad</li>
+                        <li>Soft drink</li>
+                    </ul>
+                    <a href="#" class="pill-btn secondary">Order Now</a>
+                </div>
+                <div class="price-card featured">
+                    <h3>Family Combo</h3>
+                    <p class="price">£24.99</p>
+                    <ul>
+                        <li>4 Kebabs</li>
+                        <li>Large fries</li>
+                        <li>2 Soft drinks</li>
+                        <li>Baklava for dessert</li>
+                    </ul>
+                    <a href="#" class="pill-btn primary">Order Now</a>
+                </div>
+                <div class="price-card">
+                    <h3>Vegetarian Delight</h3>
+                    <p class="price">£6.99</p>
+                    <ul>
+                        <li>Falafel wrap</li>
+                        <li>Fresh salad</li>
+                        <li>Soft drink</li>
+                    </ul>
+                    <a href="#" class="pill-btn secondary">Order Now</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Team / Staff Profiles Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Meet the Team</h2>
+            <div class="card-grid three-col">
+                <article class="card staff-card">
+                    <img src="https://images.pexels.com/photos/6459331/pexels-photo-6459331.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop&q=80" alt="Arif">
+                    <h3>Arif – Founder & Head Chef</h3>
+                    <p>Passionate about authentic Turkish cuisine and perfecting every spice blend.</p>
+                </article>
+                <article class="card staff-card">
+                    <img src="https://images.pexels.com/photos/33642483/pexels-photo-33642483.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop&q=80" alt="Maria">
+                    <h3>Maria – Manager</h3>
+                    <p>Ensures every guest experiences top‑notch service and a warm welcome.</p>
+                </article>
+                <article class="card staff-card">
+                    <img src="https://images.pexels.com/photos/18824002/pexels-photo-18824002.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop&q=80" alt="Ali">
+                    <h3>Ali – Sous Chef</h3>
+                    <p>Specialist in grilling and preparing our signature kebab.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / News Section -->
+    <section id="blog" class="section blog-section">
+        <div class="container">
+            <h2 class="section-title">Latest News</h2>
+            <div class="card-grid two-col">
+                <article class="card blog-card">
+                    <h3>New Summer Menu Launch</h3>
+                    <p>We're excited to introduce fresh salads and a chilled yoghurt drink perfect for warm days.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </article>
+                <article class="card blog-card">
+                    <h3>Live Music Nights Every Friday</h3>
+                    <p>Join us for live performances while you enjoy your favourite kebab.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions / Special Offers Section -->
+    <section id="promotions" class="section promotions-section">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="card-grid three-col">
+                <article class="card promo-card">
+                    <h3>Happy Hour – 20% Off</h3>
+                    <p>Enjoy a discount on all kebab dishes from 16:00 to 18:00, Monday‑Friday.</p>
+                </article>
+                <article class="card promo-card">
+                    <h3>Student Discount</h3>
+                    <p>Show your student ID and receive 15% off your total bill.</p>
+                </article>
+                <article class="card promo-card">
+                    <h3>Family Feast Deal</h3>
+                    <p>Buy two kebabs, get one free – perfect for a family dinner.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours Section -->
+    <section id="opening-hours" class="section opening-hours-section">
+        <div class="container">
+            <h2 class="section-title">Opening Hours</h2>
+            <table class="hours-table">
+                <tr><th>Monday‑Friday</th><td>11:00 – 22:00</td></tr>
+                <tr><th>Saturday‑Sunday</th><td>12:00 – 23:00</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Map & Directions Section (CTA Card) -->
+    <section id="map" class="section map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <p>Our restaurant is located in the heart of Berlin. Click below for directions.</p>
+            <a href="#" class="pill-btn secondary">View Map & Directions</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="youtube" style="padding:5rem 1rem;background:var(--bg,#f9f8f6);text-align:center;"><div style="max-width:860px;margin:0 auto;"><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:1rem;color:var(--text,#1a1a2e);">Watch Us in Action</h2><p style="color:var(--muted,#6b7280);margin-bottom:2rem;">See what we do best.</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius,16px);box-shadow:var(--shadow,0 4px 24px rgba(0,0,0,.10));"><iframe src="https://www.youtube.com/embed/3pbjuDY3xGo?feature=oembed" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div></section>
+<section id="contact" class="section contact-section">
+        <div class="container two-col">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p><strong>Phone:</strong> +123</p>
+                <p><strong>Email:</strong> <a href="mailto:Kebab@asd.me">Kebab@asd.me</a></p>
+                <p><strong>Address:</strong> 123, 123 Berlin</p>
+                <p><strong>Owner:</strong> Arif</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="pill-btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section dark">
+        <div class="container three-col">
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h3>Quick Links</h3>
                 <ul>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#services">Menu</a></li>
@@ -388,14 +353,46 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Follow Us</h4>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
                 <ul class="social-links">
-                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
-                    <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
                 </ul>
             </div>
         </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Arif's Dönner Kebab. All rights reserved.</p>
+        </div>
     </footer>
+<div id="sg-mobile-menu"><button id="sg-close-btn" onclick="sgClose()" aria-label="Close">&#x2715;</button></div>
+<script>
+(function(){
+  var nav=document.querySelector('nav')||document.querySelector('[role="navigation"]');
+  if(!nav)return;
+  var seen=new Set();
+  var links=Array.from(nav.querySelectorAll('a')).filter(function(a){
+    var t=a.textContent.trim();
+    if(!t||t.length>50||seen.has(t))return false;
+    seen.add(t);return true;
+  });
+  var btn=document.createElement('button');
+  btn.id='sg-hamburger';btn.setAttribute('aria-label','Menu');
+  btn.innerHTML='<span></span><span></span><span></span>';
+  btn.onclick=sgOpen;nav.appendChild(btn);
+  var menu=document.getElementById('sg-mobile-menu');
+  links.forEach(function(a){var c=a.cloneNode(true);c.onclick=sgClose;menu.appendChild(c);});
+})();
+function sgOpen(){document.getElementById('sg-mobile-menu').style.display='flex';document.body.style.overflow='hidden';}
+function sgClose(){document.getElementById('sg-mobile-menu').style.display='none';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')sgClose();});
+</script>
 </body>
 </html>
